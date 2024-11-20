@@ -1,0 +1,113 @@
+:root {
+    --green: #59aa5b;
+    --gray: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: var(--gray);
+
+}
+
+
+.container {
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.todo-list {
+    background: #fff;
+    width: 600px;
+    height: 300px;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    padding: 40px 39px 70px;
+    border-radius: 10px;
+
+}
+
+.todo-list .title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+}
+
+.todo-list .title h1 {
+    margin-right: 10px;
+    font-size: 2.5rem;
+}
+
+.todo-list .title img {
+    width: 30px;
+}
+
+.todo-list .row input {
+    background: lightgray;
+    width: 80%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-right: 15px;
+    margin-bottom: 20 px;
+
+}
+
+.todo-list .row .btn {
+    border: none;
+    width: 15%;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background: var(--green);
+    color: #fff;
+}
+
+.todo-list .row .btn:hover {
+    background: #266628;
+}
+
+.todo-list .task-list li {
+    list-style: none;
+    font-size: 18px;
+    padding: 12px 8px 12px 50px;
+    position: relative;
+
+}
+
+.todo-list li span {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 25px;
+}
+
+.todo-list .task-list li::before {
+    content: "";
+    position: absolute;
+    background: url(./img/unchecked.png) center/ cover;
+    top: 10px;
+    left: 8px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+
+}
+
+
+.todo-list .task-list li.checked {
+    text-decoration: line-through;
+}
+
+.todo-list .task-list li.checked::before {
+    background: url(./img/checked.png)center/cover;
+}
